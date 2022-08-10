@@ -72,10 +72,11 @@ const main = () => {
     const matrix = sheet.getDataRange().getValues().slice(1)
 
     const form = createForm_(sheetTitle, description)
-    const questions = matrix
+    const questions = utils_.shuffle(matrix
         .filter(cols => questionRange.includes(cols[0]))
         .map(v => v.slice(1))
-        .slice(0, questionNum)
+    ).slice(0, questionNum)
 
-    createQuestions_(form)(utils_.shuffle(questions))
+
+    createQuestions_(form)(questions)
 }
