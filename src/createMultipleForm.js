@@ -38,11 +38,11 @@ const createForm_ = (title, description) => {
         .setDescription(description)
         .setPublishingSummary(true)
         .setAllowResponseEdits(true)
-        .canEditResponse(true)
+//        .canEditResponse(true)
         .setRequireLogin(true)
         .setCollectEmail(true)
         .setShuffleQuestions(true)
-    //        .setIsQuiz(true)
+        .setIsQuiz(true)
 
     return form
 }
